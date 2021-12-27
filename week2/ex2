@@ -3,7 +3,7 @@ void main()
 {
 	int x[] = {10000, 20000, 30000, 40000, 50000, 60000, 70000, 80000};
 	int y[8];
-	FILE* txtFile = fopen("c:\\temp\\data.txt","wt");
+	FILE* txtFile = fopen("input.txt","wt");
 	for (int i = 0;i < 8;i++)
 	{
 		fprintf(txtFile, "%d\n", x[i]);
