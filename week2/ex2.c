@@ -10,11 +10,11 @@ void main()
 	}
 	fclose(txtFile);
 	
-	FILE* binFile = fopen("c:\\temp\\data.dat","wb");
+	FILE* binFile = fopen("data.dat","wb");
 	fwrite(x, sizeof(int), 8, binFile);
 	fclose(binFile);
 	
-	txtFile = fopen("c:\\temp\\data.txt","rt");
+	txtFile = fopen("input.txt","rt");
 	for (int i = 0;i < 8;i++)
 	{
 		fscanf(txtFile, "%d", &y[i]);
@@ -26,7 +26,7 @@ void main()
 	}
 	printf("\n");
 	
-	binFile = fopen("c:\\temp\\data.dat","rb");
+	binFile = fopen("data.dat","rb");
 	fread(&y[0], sizeof(int), 8, binFile);
 	fclose(binFile);
 	for (int i = 0;i < 8;i++)
